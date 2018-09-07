@@ -1,0 +1,4 @@
+[submodule "motor"]
+	path = motor
+	url = https://github.com/EuropeanSpallationSource/motor
+	ignore = all
