@@ -1,5 +1,6 @@
 #
-#  Copyright (c) 2017 - Present  European Spallation Source ERIC
+#  Copyright (c) 2019            Jeong Han Lee
+#  Copyright (c) 2017 - 2019     European Spallation Source ERIC
 #
 #  The program is free software: you can redistribute
 #  it and/or modify it under the terms of the GNU General Public License
@@ -21,7 +22,7 @@
 
 # LEGACY_RSET should be defined before driver.makefile
 # require-ess from 3.0.1
-LEGACY_RSET = YES
+#LEGACY_RSET = YES
 
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
