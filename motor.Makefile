@@ -17,12 +17,16 @@
 #
 # Author  : Jeong Han Lee
 # email   : han.lee@esss.se
-# Date    : Tuesday, September 18 12:26:13 CEST 2018
-# version : 0.0.4
+# Date    : Monday, April  1 15:00:44 CEST 2019
+# version : 0.0.5
 
 # LEGACY_RSET should be defined before driver.makefile
 # require-ess from 3.0.1
-#LEGACY_RSET = YES
+
+#USR_CPPFLAGS += -DUSE_TYPED_RSET
+
+
+LEGACY_RSET = YES
 
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
@@ -60,8 +64,6 @@ USR_CFLAGS   += -Wno-unused-but-set-variable
 USR_CPPFLAGS += -Wno-unused-variable
 USR_CPPFLAGS += -Wno-unused-function
 USR_CPPFLAGS += -Wno-unused-but-set-variable
-
-
 
 
 
