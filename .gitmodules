@@ -1,5 +1,5 @@
 [submodule "motor"]
 	path = motor
 	url = https://github.com/EuropeanSpallationSource/motor
-	branch = ess-6.9.x
+	branch = ess-master
 	ignore = dirty

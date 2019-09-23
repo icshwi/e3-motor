@@ -44,13 +44,12 @@ APPDB:=$(APP)/Db
 
 
 TEMPLATES += $(wildcard $(APPDB)/*.db)
+TEMPLATES += $(wildcard $(APPDB)/*.template)
+TEMPLATES += $(wildcard $(APPDB)/*.req)
 
 
 MOTOR_SRC:=$(APP)/MotorSrc
-#DELTATAU_SRC:=$(APP)/DeltaTauSrc
-#OMS_SRC:=$(APP)/OmsSrc
 SOFTMOTOR_SRC:=$(APP)/SoftMotorSrc
-# MOTORSIM_SRC:=$(APP)/MotorSimSrc
 
 
 USR_INCLUDES += -I$(where_am_I)$(MOTOR_SRC)
@@ -78,6 +77,7 @@ HEADERS += $(MOTOR_SRC)/motor.h
 HEADERS += $(MOTOR_SRC)/motordevCom.h
 HEADERS += $(MOTOR_SRC)/motordrvCom.h
 HEADERS += $(MOTOR_SRC)/motordrvComCode.h
+# ASYN
 HEADERS += $(MOTOR_SRC)/motor_interface.h
 HEADERS += $(MOTOR_SRC)/paramLib.h
 HEADERS += $(MOTOR_SRC)/asynMotorController.h
@@ -105,8 +105,6 @@ DBDS    += $(MOTOR_SRC)/motorSupport.dbd
 ## SOFTMOTOR_SRC
 SOURCES += $(SOFTMOTOR_SRC)/devSoft.cc
 SOURCES += $(SOFTMOTOR_SRC)/devSoftAux.cc
-
-
 DBDS    += $(SOFTMOTOR_SRC)/devSoftMotor.dbd
 
 
